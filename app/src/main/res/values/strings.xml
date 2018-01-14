@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Quiz App</string>
+    <string name="app_name">Downhill Quiz</string>
+    <string name="intro">Welcome! Do you want to acknowledge some interesting facts about this extremely dangerous discipline?</string>
+    <string name="intro_2">Just enter your name and have a good fun.</string>
+    <string name="enter_name">Please, enter your name</string>
+    <string name="name_placeholder">Name</string>
+    <string name="start_quiz_button">Start quiz</string>
 </resources>
