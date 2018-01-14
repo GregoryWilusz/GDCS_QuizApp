@@ -12,10 +12,10 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/quiz_intro"
+            android:id="@+id/question_two_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/intro"
+            android:text="@string/question_two"
             android:textColor="#000"
             android:textSize="18sp"
             android:textAlignment="center"
@@ -23,31 +23,13 @@
             android:layout_marginBottom="40dp"
             />
 
-        <TextView
-            android:id="@+id/quiz_intro_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/intro_2"
-            android:textColor="#000"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:layout_marginBottom="40dp"/>
-
-        <EditText
-            android:id="@+id/name_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="@string/name_placeholder"
-            android:inputType="textCapWords" />
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/start_quiz_button"
+            android:text="@string/next_question"
             android:layout_marginTop="40dp"
-            android:onClick="goToQuiz"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="right"
+            android:onClick="goToThirdQuestion"
             />
 
     </LinearLayout>
