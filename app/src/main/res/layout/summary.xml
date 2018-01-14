@@ -15,22 +15,20 @@
             android:id="@+id/Summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/summary"
-            android:textColor="#000"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
-            />
+            android:layout_marginTop="40dp"
+            android:text="@string/summary"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/once_again_button"
-            android:layout_marginTop="40dp"
             android:layout_gravity="center"
+            android:layout_marginTop="40dp"
             android:onClick="goToHomePage"
-            />
+            android:text="@string/once_again_button" />
 
     </LinearLayout>
 

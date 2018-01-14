@@ -1,4 +1,6 @@
 <resources>
+
+    <!--General and welcome screen strings-->
     <string name="app_name">Downhill Quiz</string>
     <string name="intro">Welcome! Do you want to find out some interesting facts about this extremely dangerous discipline?</string>
     <string name="intro_2">Just enter your name and have a good fun.</string>
@@ -6,10 +8,14 @@
     <string name="name_placeholder">Name</string>
     <string name="start_quiz_button">Start quiz</string>
 
+    <!--Buttons and toasts strings-->
     <string name="next_question">Next question</string>
+    <string name="previous_question">Back</string>
     <string name="check_answers">Check the answers</string>
     <string name="once_again_button">Once Again?</string>
+    <string name="toast_no_name">Please, provide a name to play the quiz.</string>
 
+    <!--Questions and summary strings-->
     <string name="question_one">Some Question 1</string>
     <string name="question_two">Some Question 2</string>
     <string name="question_three">Some Question 3</string>
