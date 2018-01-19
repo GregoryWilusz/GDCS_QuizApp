@@ -76,6 +76,29 @@
                 android:layout_marginBottom="40dp"
                 />
 
+            <RadioGroup style="@style/RadioGroupStyle">
+
+                <RadioButton
+                    android:id="@+id/q1a"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q1a" />
+
+                <RadioButton
+                    android:id="@+id/q1b"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q1b" />
+
+                <RadioButton
+                    android:id="@+id/q1c"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q1c" />
+
+                <RadioButton
+                    android:id="@+id/q1d"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q1d" />
+            </RadioGroup>
+
             <Button
                 android:id="@+id/goToSecondQuestion"
                 android:layout_width="wrap_content"
@@ -103,6 +126,29 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="18sp" />
+
+            <RadioGroup style="@style/RadioGroupStyle">
+
+                <RadioButton
+                    android:id="@+id/q2a"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q2a" />
+
+                <RadioButton
+                    android:id="@+id/q2b"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q2b" />
+
+                <RadioButton
+                    android:id="@+id/q2c"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q2c" />
+
+                <RadioButton
+                    android:id="@+id/q2d"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q2d" />
+            </RadioGroup>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -146,6 +192,29 @@
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="18sp" />
+
+            <RadioGroup style="@style/RadioGroupStyle">
+
+                <RadioButton
+                    android:id="@+id/q3a"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q3a" />
+
+                <RadioButton
+                    android:id="@+id/q3b"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q3b" />
+
+                <RadioButton
+                    android:id="@+id/q3c"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q3c" />
+
+                <RadioButton
+                    android:id="@+id/q3d"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q3d" />
+            </RadioGroup>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -232,6 +301,29 @@
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="18sp" />
+
+            <RadioGroup style="@style/RadioGroupStyle">
+
+                <RadioButton
+                    android:id="@+id/q5a"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q5a" />
+
+                <RadioButton
+                    android:id="@+id/q5b"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q5b" />
+
+                <RadioButton
+                    android:id="@+id/q5c"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q5c" />
+
+                <RadioButton
+                    android:id="@+id/q5d"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/q5d" />
+            </RadioGroup>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
