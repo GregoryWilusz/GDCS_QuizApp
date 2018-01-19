@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Downhill Quiz</string>
+    <string name="intro">Witaj! Chcesz dowiedzieć się interesujących faktów o tej ekstremalnie niebezpieczniej dyscyplinie narciarskiej?</string>
+    <string name="intro_2">Wpisz tylko swoje imię i baw się dobrze.</string>
+    <string name="enter_name">Proszę, wprowadź swoje imię</string>
+    <string name="name_placeholder">Imię</string>
+    <string name="start_quiz_button">Rozpocznij quiz</string>
+    <string name="next_question">Następne pytanie</string>
+    <string name="previous_question">Wróć do poprzedniego</string>
+    <string name="check_answers">Sprawdź odpowiedzi</string>
+    <string name="once_again_button">Jeszcze raz?</string>
+    <string name="toast_no_name">Proszę, wprowadź swoje imię, aby rozpocząć quiz</string>
+    <string name="question_one">1. Kto jest najbardziej utytułowanym zwycięzcą zawodów Pucharu Świata w Downhillu mężczyzn?</string>
+    <string name="question_six">6. Pierwsze odnotowane zawody downhillu w Europie miały miejsce w 1879 roku w:</string>
+    <string name="question_five">5. Początek zjazdu mężczn w St Moritz, zwany \"Free fall\" jest nawet bardziej stromy od osławionego Streifa. Zawodnicr rozpędzają się od 0 do 130 km/h w zaledwie:</string>
+    <string name="question_four">4. Lindsey Vonn, jedne z największych narciarek alpejskich w historii, zdobyła indywidualnie między innymi:</string>
+    <string name="question_three">"4. Wyścig Hahnenkamm w Kitzbühel (Austria) jest jednym z najsławniejszych i najniebezpieczniejszych zjazdów. To jedna z najdłuższych tras z 60-metrowymi skokami i spadkiem wysokości wynoszącym 860 metrów. Jest jeszcze jeden ważny czynnik - stopień nachylenia równy:"</string>
+</resources>
