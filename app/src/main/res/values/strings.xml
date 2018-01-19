@@ -27,10 +27,10 @@
     <string name="q2c" translatable="false">161.9 km/h</string>
     <string name="q2d" translatable="false"> 155.7 km/h </string>
     <string name="question_three">3. The Hahnenkamm race in Kitzbühel, Austria is one of the most famous and dangerous downhills. It is one of the longest track with 60-metre jumps and 860-metre altitude drop. There is one more important factor - the gradient of: </string>
-    <string name="q3a">60% </string>
-    <string name="q3b">45% </string>
-    <string name="q3c">30% </string>
-    <string name="q3d">85% </string>
+    <string name="q3a" translatable="false">60% </string>
+    <string name="q3b" translatable="false">45% </string>
+    <string name="q3c" translatable="false">30% </string>
+    <string name="q3d" translatable="false">85% </string>
     <string name="question_four">4. Lindsey Vonn, one of the greatest women’s skiers in the history, gained individually among the other things: </string>
     <string name="q4a">4 overall titles  </string>
     <string name="q4b">1 gold Olympic medal </string>
