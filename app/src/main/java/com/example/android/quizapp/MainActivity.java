@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
@@ -49,7 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveSixAnswerAndGoNext(View view) {
         countryFirst = (EditText) findViewById(R.id.q6);
+        checkTheAnswers();
+        summarize();
         viewAnimator.showNext();
+
+        TextView summaryText = (TextView) findViewById(R.id.summaryText);
+        summaryText.setText(String.format("%s: you answered %d/6 questions correctly!", enteredName, correctAnswersCounter));
+    }
+
+    public void summarize() {
+        Toast.makeText(this, enteredName + ": you answered " + correctAnswersCounter + "/6 questions correctly!", Toast.LENGTH_LONG).show();
     }
 
     public void goNext(View view) {
@@ -63,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method checks which answers are correct and counts them.
      */
-    public int checkTheAnswers(View view) {
+    public int checkTheAnswers() {
         correctAnswersCounter = 0;
 
         RadioButton allTimeDHWinner = findViewById(R.id.q1b);
@@ -93,15 +103,11 @@ public class MainActivity extends AppCompatActivity {
             correctAnswersCounter ++;
         }
 
-        if (countryFirst.getText().toString().equals("sweden")) {
+        if (countryFirst.getText().toString().toLowerCase().equals("sweden")) {
             correctAnswersCounter ++;
         }
 
         return correctAnswersCounter;
-    }
-
-    public void showSummary(int score, EditText name) {
-        Toast.makeText(this, name + ": you answered " + score + "/6 questions correctly!", Toast.LENGTH_SHORT).show();
     }
 
     public void clearData() {

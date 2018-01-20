@@ -282,7 +282,8 @@
         <LinearLayout style="@style/LinearLayoutStyle">
 
             <TextView style="@style/TextViewQuizStyle"
-                android:text="@string/summary" />
+                android:id="@+id/summaryText"
+                android:text="" />
 
             <Button style="@style/StartAndOnceAgainButtonsStyle"
                 android:onClick="startAgain"
