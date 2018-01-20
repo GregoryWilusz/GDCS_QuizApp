@@ -124,11 +124,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void goNext() {
+    public void goNext(View view) {
         viewAnimator.showNext();
     }
 
-    public void goBack() {
+    public void goBack(View view) {
         viewAnimator.showPrevious();
     }
 

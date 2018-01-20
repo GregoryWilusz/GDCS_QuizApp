@@ -101,6 +101,7 @@
 
             <Button
                 android:id="@+id/goToSecondQuestion"
+                android:onClick="goNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/next_question"
@@ -161,7 +162,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/previous_question"
-                    android:id="@+id/goBackToFirstQuestion"/>
+                    android:id="@+id/goBackToFirstQuestion"
+                    android:onClick="goBack"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -170,7 +172,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/next_question"
-                    android:id="@+id/goToThirdQuestion"/>
+                    android:id="@+id/goToThirdQuestion"
+                    android:onClick="goNext"/>
 
             </RelativeLayout>
 
@@ -227,7 +230,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="40dp"
                 android:text="@string/previous_question"
-                android:id="@+id/goBackToSecondQuestion"/>
+                android:id="@+id/goBackToSecondQuestion"
+                android:onClick="goBack"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -236,7 +240,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="40dp"
                 android:text="@string/next_question"
-                android:id="@+id/goToFourthQuestion" />
+                android:id="@+id/goToFourthQuestion"
+                android:onClick="goNext"/>
 
         </RelativeLayout>
 
@@ -314,7 +319,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/previous_question"
-                    android:id="@+id/goBackToThirdQuestion"/>
+                    android:id="@+id/goBackToThirdQuestion"
+                    android:onClick="goBack"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -323,7 +329,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/next_question"
-                    android:id="@+id/goToFifthQuestion"/>
+                    android:id="@+id/goToFifthQuestion"
+                    android:onClick="goNext"/>
 
             </RelativeLayout>
 
@@ -380,7 +387,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/previous_question"
-                    android:id="@+id/goBackToFourthQuestion"/>
+                    android:id="@+id/goBackToFourthQuestion"
+                    android:onClick="goBack"/>
 
                 <Button
                     android:layout_width="wrap_content"
@@ -389,7 +397,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/next_question"
-                    android:id="@+id/goToSixthQuestion"/>
+                    android:id="@+id/goToSixthQuestion"
+                    android:onClick="goNext"/>
 
             </RelativeLayout>
 
@@ -433,7 +442,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="40dp"
                     android:text="@string/previous_question"
-                    android:id="@+id/goBackToFifthQuestion"/>
+                    android:id="@+id/goBackToFifthQuestion"
+                    android:onClick="goBack"/>
 
                 <Button
                     android:layout_width="wrap_content"
