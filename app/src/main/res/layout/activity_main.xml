@@ -3,78 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.quizapp.MainActivity"
-    >
+    tools:context="com.example.android.quizapp.MainActivity">
 
     <ViewAnimator
         android:id="@+id/viewAnimator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            >
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-
-            <TextView
-                android:id="@+id/quiz_intro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
+            <TextView style="@style/TextViewQuizIntroStyle"
                 android:layout_marginTop="40dp"
-                android:text="@string/intro"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
+                android:text="@string/intro" />
 
-            <TextView
-                android:id="@+id/quiz_intro_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:text="@string/intro_2"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
+            <TextView style="@style/TextViewQuizIntroStyle"
+                android:text="@string/intro_2" />
 
-            <EditText
+            <EditText style="@style/EditTextStyle"
                 android:id="@+id/name_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="@string/name_placeholder"
-                android:inputType="textCapWords" />
+                android:hint="@string/name_placeholder" />
 
-            <Button
+            <Button style="@style/StartAndOnceAgainButtonsStyle"
                 android:onClick="isNameProvided"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
                 android:text="@string/start_quiz_button" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView
-                android:id="@+id/question_one_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/question_one"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
-                />
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_one" />
 
             <RadioGroup style="@style/RadioGroupStyle">
 
@@ -99,33 +57,16 @@
                     android:text="@string/q1d" />
             </RadioGroup>
 
-            <Button
+            <Button style="@style/goToSecondQuestionButtonStyle"
                 android:onClick="goNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next_question"
-                android:layout_marginTop="40dp"
-                android:layout_gravity="end"
-                />
+                android:text="@string/next_question" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView
-                android:id="@+id/question_two_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/question_two"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_two" />
 
             <RadioGroup style="@style/RadioGroupStyle">
 
@@ -154,44 +95,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/previous_question"
-                    android:onClick="goBack"/>
+                <Button style="@style/BackButtonStyle"
+                    android:onClick="goBack"
+                    android:text="@string/previous_question" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/next_question"
-                    android:onClick="goNext"/>
+                <Button style="@style/NextButtonStyle"
+                    android:onClick="goNext"
+                    android:text="@string/next_question" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-        <TextView
-            android:id="@+id/question_three_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/question_three"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textSize="18sp" />
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_three" />
 
             <RadioGroup style="@style/RadioGroupStyle">
 
@@ -216,135 +135,71 @@
                     android:text="@string/q3d" />
             </RadioGroup>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="40dp"
-                android:text="@string/previous_question"
-                android:onClick="goBack"/>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="40dp"
-                android:text="@string/next_question"
-                android:onClick="goNext"/>
-
-        </RelativeLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/question_four_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/question_four"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <CheckBox
-                android:id="@+id/overallTitles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="@string/q4a"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/goldOlympic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="@string/q4b"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/goldWC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="@string/q4c"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/silverOlympic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:paddingLeft="24dp"
-                android:text="@string/q4d"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/previous_question"
-                    android:onClick="goBack"/>
+                <Button style="@style/BackButtonStyle"
+                    android:onClick="goBack"
+                    android:text="@string/previous_question" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/next_question"
-                    android:onClick="goNext"/>
+                <Button style="@style/NextButtonStyle"
+                    android:onClick="goNext"
+                    android:text="@string/next_question" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView
-                android:id="@+id/question_five_content"
-                android:layout_width="wrap_content"
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_four" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/question_five"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <CheckBox style="@style/CheckBoxStyle"
+                    android:id="@+id/overallTitles"
+                    android:text="@string/q4a" />
+
+                <CheckBox style="@style/CheckBoxStyle"
+                    android:id="@+id/goldOlympic"
+                    android:text="@string/q4b" />
+
+                <CheckBox style="@style/CheckBoxStyle"
+                    android:id="@+id/goldWC"
+                    android:text="@string/q4c" />
+
+                <CheckBox style="@style/CheckBoxStyle"
+                    android:id="@+id/silverOlympic"
+                    android:text="@string/q4d" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button style="@style/BackButtonStyle"
+                    android:onClick="goBack"
+                    android:text="@string/previous_question" />
+
+                <Button style="@style/NextButtonStyle"
+                    android:onClick="goNext"
+                    android:text="@string/next_question" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutStyle">
+
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_five" />
 
             <RadioGroup style="@style/RadioGroupStyle">
 
@@ -373,105 +228,53 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/previous_question"
-                    android:onClick="goBack"/>
+                <Button style="@style/BackButtonStyle"
+                    android:onClick="goBack"
+                    android:text="@string/previous_question" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/next_question"
-                    android:onClick="goNext"/>
+                <Button style="@style/NextButtonStyle"
+                    android:onClick="goNext"
+                    android:text="@string/next_question" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView
-                android:id="@+id/question_six_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/question_six"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
-                />
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/question_six" />
 
-            <EditText
+            <EditText style="@style/EditTextStyle"
                 android:id="@+id/q6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:hint="@string/q6"
-                android:inputType="textCapWords" />
+                />
 
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/previous_question"
-                    android:onClick="goBack"/>
+                <Button style="@style/BackButtonStyle"
+                    android:onClick="goBack"
+                    android:text="@string/previous_question" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/check_answers"
-                    android:onClick="goNext"/>
+                <Button style="@style/NextButtonStyle"
+                    android:onClick="goNext"
+                    android:text="@string/check_answers" />
 
             </RelativeLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+        <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView
-                android:id="@+id/Summary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/summary"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="18sp" />
+            <TextView style="@style/TextViewQuizStyle"
+                android:text="@string/summary" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:text="@string/once_again_button"
-                android:onClick="startAgain"/>
+            <Button style="@style/StartAndOnceAgainButtonsStyle"
+                android:onClick="startAgain"
+                android:text="@string/once_again_button" />
 
         </LinearLayout>
 
