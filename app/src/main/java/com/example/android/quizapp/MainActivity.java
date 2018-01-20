@@ -7,15 +7,18 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText enteredName;
+    EditText enteredName, countryFirst;
     ViewAnimator viewAnimator;
     Animation animationIn, animationOut;
+    int correctAnswersCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +34,6 @@ public class MainActivity extends AppCompatActivity {
         viewAnimator.setOutAnimation(animationOut);
     }
 
-    public void goNext(View view) {
-        viewAnimator.showNext();
-    }
-
-    public void goBack(View view) {
-        viewAnimator.showPrevious();
-    }
-
     /**
      * This method checks if the name is provided.
      */
@@ -52,11 +47,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void saveSixAnswerAndGoNext(View view) {
+        countryFirst = (EditText) findViewById(R.id.q6);
+        viewAnimator.showNext();
+    }
+
+    public void goNext(View view) {
+        viewAnimator.showNext();
+    }
+
+    public void goBack(View view) {
+        viewAnimator.showPrevious();
+    }
+
     /**
      * This method checks which answers are correct and counts them.
      */
-    public void checkTheAnswers(View view) {
-        int correctAnswersCounter = 0;
+    public int checkTheAnswers(View view) {
+        correctAnswersCounter = 0;
 
         RadioButton allTimeDHWinner = findViewById(R.id.q1b);
         if (allTimeDHWinner.isChecked()) {
@@ -85,25 +93,44 @@ public class MainActivity extends AppCompatActivity {
             correctAnswersCounter ++;
         }
 
-        EditText countryWithFirstRace = (EditText) findViewById(R.id.q6);
-        if (countryWithFirstRace.getText().equals("sweden")) {
+        if (countryFirst.getText().toString().equals("sweden")) {
             correctAnswersCounter ++;
         }
 
-        showSummary(correctAnswersCounter, enteredName);
+        return correctAnswersCounter;
     }
 
     public void showSummary(int score, EditText name) {
         Toast.makeText(this, name + ": you answered " + score + "/6 questions correctly!", Toast.LENGTH_SHORT).show();
     }
 
+    public void clearData() {
+        enteredName.setText("");
+        countryFirst.setText("");
+        RadioGroup radioGroupQ1 = (RadioGroup) findViewById(R.id.qOneRadioGroup);
+        RadioGroup radioGroupQ2 = (RadioGroup) findViewById(R.id.qTwoRadioGroup);
+        RadioGroup radioGroupQ3 = (RadioGroup) findViewById(R.id.qThreeRadioGroup);
+        RadioGroup radioGroupQ5 = (RadioGroup) findViewById(R.id.qFiveRadioGroup);
+        radioGroupQ1.clearCheck();
+        radioGroupQ2.clearCheck();
+        radioGroupQ3.clearCheck();
+        radioGroupQ5.clearCheck();
+
+        LinearLayout checkBoxesContainer = (LinearLayout) findViewById(R.id.checkBoxesContainer);
+        for (int i = 0; i < checkBoxesContainer.getChildCount(); i++) {
+            View checkBoxesContainerChild = checkBoxesContainer.getChildAt(i);
+            if (checkBoxesContainerChild instanceof CheckBox) {
+                ((CheckBox) checkBoxesContainerChild).setChecked(false);
+            }
+        }
+    }
+
     /**
      * This method clear the enteredName and return to default View.
      */
     public void startAgain(View view) {
-        enteredName.setText("");
+        clearData();
         viewAnimator.setDisplayedChild(0);
-
     }
 
 }

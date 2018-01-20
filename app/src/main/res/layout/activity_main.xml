@@ -34,7 +34,8 @@
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_one" />
 
-            <RadioGroup style="@style/RadioGroupStyle">
+            <RadioGroup style="@style/RadioGroupStyle"
+                android:id="@+id/qOneRadioGroup">
 
                 <RadioButton
                     android:id="@+id/q1a"
@@ -68,7 +69,8 @@
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_two" />
 
-            <RadioGroup style="@style/RadioGroupStyle">
+            <RadioGroup style="@style/RadioGroupStyle"
+                android:id="@+id/qTwoRadioGroup">
 
                 <RadioButton
                     android:id="@+id/q2a"
@@ -112,7 +114,8 @@
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_three" />
 
-            <RadioGroup style="@style/RadioGroupStyle">
+            <RadioGroup style="@style/RadioGroupStyle"
+                android:id="@+id/qThreeRadioGroup">
 
                 <RadioButton
                     android:id="@+id/q3a"
@@ -153,10 +156,18 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
+            <!--<ImageView-->
+                <!--android:id="@+id/Image"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:src="@drawable/vonn" />-->
+
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_four" />
 
             <LinearLayout
+                android:id="@+id/checkBoxesContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -201,7 +212,8 @@
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_five" />
 
-            <RadioGroup style="@style/RadioGroupStyle">
+            <RadioGroup style="@style/RadioGroupStyle"
+                android:id="@+id/qFiveRadioGroup">
 
                 <RadioButton
                     android:id="@+id/q5a"
@@ -260,7 +272,7 @@
                     android:text="@string/previous_question" />
 
                 <Button style="@style/NextButtonStyle"
-                    android:onClick="goNext"
+                    android:onClick="saveSixAnswerAndGoNext"
                     android:text="@string/check_answers" />
 
             </RelativeLayout>
