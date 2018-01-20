@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
@@ -44,75 +46,75 @@ public class MainActivity extends AppCompatActivity {
         viewAnimator.setInAnimation(animationIn);
         viewAnimator.setOutAnimation(animationOut);
 
-        goToSecondQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showNext();
-            }
-        });
-
-        goBackToFirstQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showPrevious();
-            }
-        });
-
-        goToThirdQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showNext();
-            }
-        });
-
-        goBackToSecondQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showPrevious();
-            }
-        });
-
-        goToFourthQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showNext();
-            }
-        });
-
-        goBackToThirdQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showPrevious();
-            }
-        });
-
-        goToFifthQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showNext();
-            }
-        });
-
-        goBackToFourthQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showPrevious();
-            }
-        });
-
-        goToSixthQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showNext();
-            }
-        });
-
-        goBackToFifthQuestion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewAnimator.showPrevious();
-            }
-        });
+//        goToSecondQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showNext();
+//            }
+//        });
+//
+//        goBackToFirstQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showPrevious();
+//            }
+//        });
+//
+//        goToThirdQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showNext();
+//            }
+//        });
+//
+//        goBackToSecondQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showPrevious();
+//            }
+//        });
+//
+//        goToFourthQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showNext();
+//            }
+//        });
+//
+//        goBackToThirdQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showPrevious();
+//            }
+//        });
+//
+//        goToFifthQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showNext();
+//            }
+//        });
+//
+//        goBackToFourthQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showPrevious();
+//            }
+//        });
+//
+//        goToSixthQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showNext();
+//            }
+//        });
+//
+//        goBackToFifthQuestion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                viewAnimator.showPrevious();
+//            }
+//        });
 
         goToSummary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +122,14 @@ public class MainActivity extends AppCompatActivity {
                 viewAnimator.showNext();
             }
         });
+    }
+
+    public void goNext() {
+        viewAnimator.showNext();
+    }
+
+    public void goBack() {
+        viewAnimator.showPrevious();
     }
 
     /**
@@ -133,7 +143,51 @@ public class MainActivity extends AppCompatActivity {
         } else {
             viewAnimator.showNext();
         }
+    }
 
+    /**
+     * This method checks which answers are correct and counts them.
+     */
+    public void checkTheAnswers(View view) {
+        int correctAnswersCounter = 0;
+
+        RadioButton allTimeDHWinner = findViewById(R.id.q1b);
+        if (allTimeDHWinner.isChecked()) {
+            correctAnswersCounter ++;
+        }
+
+        RadioButton maxSpeedRecorded = findViewById(R.id.q2c);
+        if (maxSpeedRecorded.isChecked()) {
+            correctAnswersCounter ++;
+        }
+
+        RadioButton theGradient = findViewById(R.id.q3d);
+        if (theGradient.isChecked()) {
+            correctAnswersCounter ++;
+        }
+
+        CheckBox overallTitles = (CheckBox) findViewById(R.id.overallTitles);
+        CheckBox goldOlympic = (CheckBox) findViewById(R.id.goldOlympic);
+        CheckBox goldWC = (CheckBox) findViewById(R.id.goldWC);
+        if (overallTitles.isChecked() && goldOlympic.isChecked() && goldWC.isChecked()) {
+            correctAnswersCounter ++;
+        }
+
+        RadioButton accelerateTime = findViewById(R.id.q5b);
+        if (accelerateTime.isChecked()) {
+            correctAnswersCounter ++;
+        }
+
+        EditText countryWithFirstRace = (EditText) findViewById(R.id.q6);
+        if (countryWithFirstRace.getText().equals("sweden")) {
+            correctAnswersCounter ++;
+        }
+
+        showSummary(correctAnswersCounter, enteredName);
+    }
+
+    public void showSummary(int score, EditText name) {
+        Toast.makeText(this, name + ": you answered " + score + "/6 questions correctly!", Toast.LENGTH_SHORT).show();
     }
 
     /**
