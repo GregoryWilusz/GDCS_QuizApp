@@ -51,15 +51,24 @@ public class MainActivity extends AppCompatActivity {
     public void saveSixAnswerAndGoNext(View view) {
         countryFirst = (EditText) findViewById(R.id.q6);
         checkTheAnswers();
-        summarize();
+        summarize(enteredName.getText().toString());
         viewAnimator.showNext();
 
         TextView summaryText = (TextView) findViewById(R.id.summaryText);
-        summaryText.setText(String.format("%s: you answered %d/6 questions correctly!", enteredName, correctAnswersCounter));
+        TextView summaryText2 = (TextView) findViewById(R.id.summaryText2);
+        summaryText.setText(getString(R.string.summary, enteredName.getText().toString(), correctAnswersCounter));
+        if (correctAnswersCounter < 3) {
+            summaryText2.setText(getString(R.string.summary2a));
+        } else if (correctAnswersCounter >= 3 && correctAnswersCounter < 5)
+            summaryText2.setText(getString(R.string.summary2b));
+        else {
+            summaryText2.setText(getString(R.string.summary2c));
+        }
+
     }
 
-    public void summarize() {
-        Toast.makeText(this, enteredName + ": you answered " + correctAnswersCounter + "/6 questions correctly!", Toast.LENGTH_LONG).show();
+    public void summarize(String enteredName) {
+        Toast.makeText(this, getString(R.string.summary, enteredName, correctAnswersCounter), Toast.LENGTH_LONG).show();
     }
 
     public void goNext(View view) {

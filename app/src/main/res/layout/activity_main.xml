@@ -10,10 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <LinearLayout style="@style/LinearLayoutStyle">
 
+            <ImageView style="@style/ImageViewStyle"
+                android:src="@drawable/canadian"
+                android:contentDescription="@string/canadian"/>
+
             <TextView style="@style/TextViewQuizIntroStyle"
-                android:layout_marginTop="40dp"
                 android:text="@string/intro" />
 
             <TextView style="@style/TextViewQuizIntroStyle"
@@ -111,6 +115,10 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
+            <ImageView style="@style/ImageViewStyle"
+                android:src="@drawable/svindal"
+                android:contentDescription="@string/svindal"/>
+
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_three" />
 
@@ -156,12 +164,9 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <!--<ImageView-->
-                <!--android:id="@+id/Image"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_marginTop="15dp"-->
-                <!--android:src="@drawable/vonn" />-->
+            <ImageView style="@style/ImageViewStyle"
+                android:src="@drawable/vonn"
+                android:contentDescription="@string/vonn" />
 
             <TextView style="@style/TextViewQuizStyle"
                 android:text="@string/question_four" />
@@ -283,6 +288,9 @@
 
             <TextView style="@style/TextViewQuizStyle"
                 android:id="@+id/summaryText"
+                android:text="" />
+            <TextView style="@style/TextViewQuizStyle"
+                android:id="@+id/summaryText2"
                 android:text="" />
 
             <Button style="@style/StartAndOnceAgainButtonsStyle"
