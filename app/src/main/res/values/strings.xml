@@ -4,7 +4,6 @@
     <string name="app_name">Downhill Quiz</string>
     <string name="intro">Welcome! Do you want to find out some interesting facts about this extremely dangerous discipline?</string>
     <string name="intro_2">Just enter your name and have a good fun.</string>
-    <string name="enter_name">Please, enter your name</string>
     <string name="name_placeholder">Name</string>
     <string name="start_quiz_button">Start quiz</string>
     <string name="canadian">Canadian DH racer</string>
@@ -29,7 +28,7 @@
     <string name="q2b" translatable="false">145,2 km/h</string>
     <string name="q2c" translatable="false">161.9 km/h</string>
     <string name="q2d" translatable="false">155.7 km/h</string>
-    <string name="question_three">3/6. The Hahnenkamm race in Kitzbühel, Austria is one of the most famous and dangerous downhills. It is one of the longest track with 60-metre jumps and 860-metre altitude drop. There is one more important factor - the gradient of:</string>
+    <string name="question_three">3/6. The Hahnenkamm race in Kitzbühel, Austria, is one of the most famous and dangerous downhills. It is one of the longest track with 60-metre jumps and 860-metre altitude drop. There is one more important factor - the gradient of:</string>
     <string name="q3a" translatable="false">60%</string>
     <string name="q3b" translatable="false">45%</string>
     <string name="q3c" translatable="false">30%</string>
@@ -39,13 +38,13 @@
     <string name="q4b">1 gold Olympic medal</string>
     <string name="q4c">2 gold WC medals</string>
     <string name="q4d">2 silver Olympic medals</string>
-    <string name="question_five">5/6. The start of the men’s Corviglia downhill in St Moritz, called “Free fall” is even steeper than the infamous Streif. The racers accelerate from 0 to 130 km/h in just:</string>
+    <string name="question_five">5/6. The start of the men’s Corviglia downhill in St Moritz, called “Free fall”, is even steeper than the infamous Streif. The racers accelerate from 0 to 130 km/h in just:</string>
     <string name="q5a">5 seconds</string>
     <string name="q5b">7 seconds</string>
     <string name="q5c">10 seconds</string>
     <string name="q5d">14 seconds</string>
     <string name="question_six">6/6. The first recorded downhill skiing race in Europe took place in 1879 in the country of:</string>
-    <string name="q6">Country</string>
+    <string name="q6">Enter the name of the country</string>
     <string name="summary"><xliff:g id="enteredName" example="Greg">%s</xliff:g>: you answered <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g>/6 questions correctly.</string>
     <string name="summary2a">Try to get a better result, you can do it!</string>
     <string name="summary2b">Nice try! It still could be better. Next turn?</string>

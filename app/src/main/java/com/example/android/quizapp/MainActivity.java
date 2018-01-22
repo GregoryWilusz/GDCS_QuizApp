@@ -1,10 +1,8 @@
 package com.example.android.quizapp;
 
-import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
@@ -50,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void saveSixAnswerAndGoNext(View view) {
+    /**
+     * This method is responsible for taking user to summary screen and creating it.
+     */
+    public void goToSummary(View view) {
         countryFirst = (EditText) findViewById(R.id.q6);
         checkTheAnswers();
-        summarize(enteredName.getText().toString());
+        showSummarizeToast(enteredName.getText().toString());
         viewAnimator.showNext();
 
         TextView summaryText = (TextView) findViewById(R.id.summaryText);
@@ -69,58 +70,71 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void summarize(String enteredName) {
+    /**
+     * This method shows Toast message with the right answers score.
+     */
+    public void showSummarizeToast(String enteredName) {
         Toast.makeText(this, getString(R.string.summary, enteredName, correctAnswersCounter), Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * This method change the view to the next one.
+     */
     public void goNext(View view) {
         viewAnimator.showNext();
     }
 
+    /**
+     * This method change the view to the previous one.
+     */
     public void goBack(View view) {
         viewAnimator.showPrevious();
     }
 
     /**
-     * This method checks which answers are correct and counts them.
+     * This method checks which answers are correct, counts right answers and return the number of correct answers.
      */
     public int checkTheAnswers() {
         correctAnswersCounter = 0;
 
         RadioButton allTimeDHWinner = findViewById(R.id.q1b);
         if (allTimeDHWinner.isChecked()) {
-            correctAnswersCounter ++;
+            correctAnswersCounter++;
         }
 
         RadioButton maxSpeedRecorded = findViewById(R.id.q2c);
         if (maxSpeedRecorded.isChecked()) {
-            correctAnswersCounter ++;
+            correctAnswersCounter++;
         }
 
         RadioButton theGradient = findViewById(R.id.q3d);
         if (theGradient.isChecked()) {
-            correctAnswersCounter ++;
+            correctAnswersCounter++;
         }
 
         CheckBox overallTitles = (CheckBox) findViewById(R.id.overallTitles);
         CheckBox goldOlympic = (CheckBox) findViewById(R.id.goldOlympic);
         CheckBox goldWC = (CheckBox) findViewById(R.id.goldWC);
         if (overallTitles.isChecked() && goldOlympic.isChecked() && goldWC.isChecked()) {
-            correctAnswersCounter ++;
+            correctAnswersCounter++;
         }
 
         RadioButton accelerateTime = findViewById(R.id.q5b);
         if (accelerateTime.isChecked()) {
-            correctAnswersCounter ++;
+            correctAnswersCounter++;
         }
 
-        if (countryFirst.getText().toString().toLowerCase().equals("sweden")) {
-            correctAnswersCounter ++;
+        if (countryFirst.getText().toString().toLowerCase().equals("sweden")
+                || countryFirst.getText().toString().toLowerCase().equals("szwecja") ) {
+            correctAnswersCounter++;
         }
 
         return correctAnswersCounter;
     }
 
+    /**
+     * This method clears all data provided in previous turn.
+     */
     public void clearData() {
         enteredName.setText("");
         countryFirst.setText("");
@@ -143,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method clear the enteredName and return to default View.
+     * This method sets default view and invoke clearing data method.
      */
     public void startAgain(View view) {
         clearData();

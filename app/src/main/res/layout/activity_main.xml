@@ -10,24 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <ImageView style="@style/ImageViewStyle"
-                android:src="@drawable/canadian"
-                android:contentDescription="@string/canadian"/>
+            <ImageView
+                style="@style/ImageViewStyle"
+                android:contentDescription="@string/canadian"
+                android:src="@drawable/canadian" />
 
-            <TextView style="@style/TextViewQuizIntroStyle"
+            <TextView
+                style="@style/TextViewQuizIntroStyle"
                 android:text="@string/intro" />
 
-            <TextView style="@style/TextViewQuizIntroStyle"
+            <TextView
+                style="@style/TextViewQuizIntroStyle"
                 android:text="@string/intro_2" />
 
-            <EditText style="@style/EditTextStyle"
+            <EditText
                 android:id="@+id/name_field"
+                style="@style/EditTextStyle"
                 android:hint="@string/name_placeholder" />
 
-            <Button style="@style/StartAndOnceAgainButtonsStyle"
+            <Button
+                style="@style/StartAndOnceAgainButtonsStyle"
                 android:onClick="isNameProvided"
                 android:text="@string/start_quiz_button" />
 
@@ -35,11 +39,13 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_one" />
 
-            <RadioGroup style="@style/RadioGroupStyle"
-                android:id="@+id/qOneRadioGroup">
+            <RadioGroup
+                android:id="@+id/qOneRadioGroup"
+                style="@style/RadioGroupStyle">
 
                 <RadioButton
                     android:id="@+id/q1a"
@@ -62,7 +68,8 @@
                     android:text="@string/q1d" />
             </RadioGroup>
 
-            <Button style="@style/goToSecondQuestionButtonStyle"
+            <Button
+                style="@style/goToSecondQuestionButtonStyle"
                 android:onClick="goNext"
                 android:text="@string/next_question" />
 
@@ -70,11 +77,13 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_two" />
 
-            <RadioGroup style="@style/RadioGroupStyle"
-                android:id="@+id/qTwoRadioGroup">
+            <RadioGroup
+                android:id="@+id/qTwoRadioGroup"
+                style="@style/RadioGroupStyle">
 
                 <RadioButton
                     android:id="@+id/q2a"
@@ -101,11 +110,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button style="@style/BackButtonStyle"
+                <Button
+                    style="@style/BackButtonStyle"
                     android:onClick="goBack"
                     android:text="@string/previous_question" />
 
-                <Button style="@style/NextButtonStyle"
+                <Button
+                    style="@style/NextButtonStyle"
                     android:onClick="goNext"
                     android:text="@string/next_question" />
 
@@ -115,15 +126,18 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <ImageView style="@style/ImageViewStyle"
-                android:src="@drawable/svindal"
-                android:contentDescription="@string/svindal"/>
+            <ImageView
+                style="@style/ImageViewStyle"
+                android:contentDescription="@string/svindal"
+                android:src="@drawable/svindal" />
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_three" />
 
-            <RadioGroup style="@style/RadioGroupStyle"
-                android:id="@+id/qThreeRadioGroup">
+            <RadioGroup
+                android:id="@+id/qThreeRadioGroup"
+                style="@style/RadioGroupStyle">
 
                 <RadioButton
                     android:id="@+id/q3a"
@@ -150,11 +164,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button style="@style/BackButtonStyle"
+                <Button
+                    style="@style/BackButtonStyle"
                     android:onClick="goBack"
                     android:text="@string/previous_question" />
 
-                <Button style="@style/NextButtonStyle"
+                <Button
+                    style="@style/NextButtonStyle"
                     android:onClick="goNext"
                     android:text="@string/next_question" />
 
@@ -164,11 +180,13 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <ImageView style="@style/ImageViewStyle"
-                android:src="@drawable/vonn"
-                android:contentDescription="@string/vonn" />
+            <ImageView
+                style="@style/ImageViewStyle"
+                android:contentDescription="@string/vonn"
+                android:src="@drawable/vonn" />
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_four" />
 
             <LinearLayout
@@ -178,20 +196,24 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <CheckBox style="@style/CheckBoxStyle"
+                <CheckBox
                     android:id="@+id/overallTitles"
+                    style="@style/CheckBoxStyle"
                     android:text="@string/q4a" />
 
-                <CheckBox style="@style/CheckBoxStyle"
+                <CheckBox
                     android:id="@+id/goldOlympic"
+                    style="@style/CheckBoxStyle"
                     android:text="@string/q4b" />
 
-                <CheckBox style="@style/CheckBoxStyle"
+                <CheckBox
                     android:id="@+id/goldWC"
+                    style="@style/CheckBoxStyle"
                     android:text="@string/q4c" />
 
-                <CheckBox style="@style/CheckBoxStyle"
+                <CheckBox
                     android:id="@+id/silverOlympic"
+                    style="@style/CheckBoxStyle"
                     android:text="@string/q4d" />
 
             </LinearLayout>
@@ -200,11 +222,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button style="@style/BackButtonStyle"
+                <Button
+                    style="@style/BackButtonStyle"
                     android:onClick="goBack"
                     android:text="@string/previous_question" />
 
-                <Button style="@style/NextButtonStyle"
+                <Button
+                    style="@style/NextButtonStyle"
                     android:onClick="goNext"
                     android:text="@string/next_question" />
 
@@ -214,11 +238,13 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_five" />
 
-            <RadioGroup style="@style/RadioGroupStyle"
-                android:id="@+id/qFiveRadioGroup">
+            <RadioGroup
+                android:id="@+id/qFiveRadioGroup"
+                style="@style/RadioGroupStyle">
 
                 <RadioButton
                     android:id="@+id/q5a"
@@ -245,11 +271,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button style="@style/BackButtonStyle"
+                <Button
+                    style="@style/BackButtonStyle"
                     android:onClick="goBack"
                     android:text="@string/previous_question" />
 
-                <Button style="@style/NextButtonStyle"
+                <Button
+                    style="@style/NextButtonStyle"
                     android:onClick="goNext"
                     android:text="@string/next_question" />
 
@@ -259,25 +287,28 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
+                style="@style/TextViewQuizStyle"
                 android:text="@string/question_six" />
 
-            <EditText style="@style/EditTextStyle"
+            <EditText
                 android:id="@+id/q6"
-                android:hint="@string/q6"
-                />
+                style="@style/EditTextStyle"
+                android:hint="@string/q6" />
 
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button style="@style/BackButtonStyle"
+                <Button
+                    style="@style/BackButtonStyle"
                     android:onClick="goBack"
                     android:text="@string/previous_question" />
 
-                <Button style="@style/NextButtonStyle"
-                    android:onClick="saveSixAnswerAndGoNext"
+                <Button
+                    style="@style/NextButtonStyle"
+                    android:onClick="goToSummary"
                     android:text="@string/check_answers" />
 
             </RelativeLayout>
@@ -286,14 +317,18 @@
 
         <LinearLayout style="@style/LinearLayoutStyle">
 
-            <TextView style="@style/TextViewQuizStyle"
+            <TextView
                 android:id="@+id/summaryText"
-                android:text="" />
-            <TextView style="@style/TextViewQuizStyle"
-                android:id="@+id/summaryText2"
+                style="@style/TextViewQuizStyle"
                 android:text="" />
 
-            <Button style="@style/StartAndOnceAgainButtonsStyle"
+            <TextView
+                android:id="@+id/summaryText2"
+                style="@style/TextViewQuizStyle"
+                android:text="" />
+
+            <Button
+                style="@style/StartAndOnceAgainButtonsStyle"
                 android:onClick="startAgain"
                 android:text="@string/once_again_button" />
 
