@@ -332,6 +332,11 @@
                 android:onClick="startAgain"
                 android:text="@string/once_again_button" />
 
+            <Button
+                style="@style/StartAndOnceAgainButtonsStyle"
+                android:onClick="shareTheScoreWithFriends"
+                android:text="@string/shareButton" />
+
         </LinearLayout>
 
     </ViewAnimator>

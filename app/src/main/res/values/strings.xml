@@ -49,6 +49,10 @@
     <string name="summary2a">Try to get a better result, you can do it!</string>
     <string name="summary2b">Nice try! It still could be better. Next turn?</string>
     <string name="summary2c">Excellent performance. Congratulations!</string>
+
+    <string name="shareButton">Share your score with friends</string>
+    <string name="emailContent"><xliff:g id="enteredName" example="Greg">%s</xliff:g> answered <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g>/6 questions correctly.</string>
+    <string name="emailSubject">Your friend <xliff:g id="enteredName" example="Greg">%s</xliff:g> wants you to check his score in DownhillQuiz App.</string>
 </resources>
 
 

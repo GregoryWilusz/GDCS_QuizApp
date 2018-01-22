@@ -29,4 +29,7 @@
     <string name="summary2a">Spróbuj uzyskać lepszy wynik, stać Cię na to!</string>
     <string name="summary2b">Niezła próba! Wciąż mogłoby być lepiej. Kolejna tura?</string>
     <string name="summary2c">Świetny występ. Gratulacje!</string>
+    <string name="emailContent"><xliff:g id="enteredName" example="Greg">%s</xliff:g> odpowiedział poprawnie na <xliff:g id="correctAnswersCounter" example="3">%d</xliff:g> z 6 pytań.</string>
+    <string name="emailSubject">Twój przyjaciel <xliff:g id="enteredName" example="Greg">%s</xliff:g> chce abyś sprawdził, ile punktów zdobył w aplikacji DownhillQuiz.</string>
+    <string name="shareButton">Podziel się ze znajomymi</string>
 </resources>

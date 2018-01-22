@@ -1,5 +1,7 @@
 package com.example.android.quizapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +35,23 @@ public class MainActivity extends AppCompatActivity {
 
         viewAnimator.setInAnimation(animationIn);
         viewAnimator.setOutAnimation(animationOut);
+    }
+
+    /**
+     * This method invokes an common email intent and creates an email's subject and content
+     *
+     */
+    public void shareTheScoreWithFriends(View view) {
+        String emailContent = getString(R.string.emailContent, enteredName.getText().toString(), correctAnswersCounter);
+        String emailSubject = getString(R.string.emailSubject, enteredName.getText().toString());
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
+        intent.putExtra(Intent.EXTRA_TEXT, emailContent);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     /**
